@@ -85,7 +85,7 @@ void removerproduto(produtos *produto) // função para remover todos os dados d
     produto[j - 1].preco = 0.00;
 }
 
-void editarproduto(produtos *produto)
+void editarproduto(produtos *produto) //função editar produto
 {
     int j, opc;
     printf("insira o numero em que o produto que voce quer alterar esta cadastrado(de acordo com a tabela do (exibirprodutos): ");
