@@ -19,7 +19,12 @@ void deposita(float valor, ContaBancaria *user){
 }
 
 int main (void){
-    ContaBancaria *user = (ContaBancaria*) malloc(sizeof(ContaBancaria)); //declarando ponteiro
+    ContaBancaria *user = (ContaBancaria*) malloc(sizeof(ContaBancaria));
+    if (user == NULL)
+    {
+        printf("Erro na alocacao de memoria!\n");
+        return 1;
+    }
     strcpy(user->nome, "Jhoan");
     user->conta = 1;
     user->saldo = 100.25;
