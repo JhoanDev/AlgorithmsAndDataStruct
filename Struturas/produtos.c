@@ -91,7 +91,7 @@ void editarproduto(produtos *produto) //função editar produto
     printf("insira o numero em que o produto que voce quer alterar esta cadastrado(de acordo com a tabela do (exibirprodutos): ");
     scanf("%d", &j);
     printf("Digite o nome do novo produto: ");
-    scanf("%s", produto[j - 1].nome);
+    scanf(" %s", produto[j - 1].nome);
     printf("Digite a quantidade do novo produto: ");
     scanf("%d", &produto[j - 1].quantidade);
     while (produto[j - 1].quantidade < MINQuantidade)

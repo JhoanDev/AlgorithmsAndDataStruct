@@ -25,7 +25,7 @@ int main(void)
         printf("\nInsira seu sexo (F ou M): ");
         scanf(" %c", &sexo[i]);
         printf("\nInsira sua opiniao (gostei ou nao gostei):");
-        scanf(" %s", opiniao[i]);
+        scanf(" %[^\n]", opiniao[i]);
     }
     for (i = 0; i < entrevistados; i++)
     {
