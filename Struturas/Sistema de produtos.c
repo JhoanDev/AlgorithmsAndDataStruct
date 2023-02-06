@@ -1,6 +1,6 @@
 /*O programa permite ao usuário criar uma lista de produtos, onde cada produto é descrito por um nome, preço e quantidade.
  O usuário pode adicionar, exibir e remover produtos da lista. ao fim do codigo deve aparecer a soma de todos produtos
- para saber o preço total,quantidade de tipos e quantidade geral. */
+ para saber o preço total,quantidade de tipos e quantidade geral.*/
 
 #include <stdio.h>
 #include <stdlib.h>
