@@ -15,6 +15,11 @@ void preenchefuncionarios(funcionarios *funcionario, int *qnt)
     printf("quantos funcionarios deseja cadastrar:");
     scanf("%d", &n);
     funcionario = realloc(funcionario, (*qnt + n) * sizeof(funcionarios));
+    if (funcionario == NULL)
+    {
+        printf("Erro");
+        exit(1);
+    }
     for (size_t i = (*qnt); i < n + (*qnt); i++)
     {
         printf("Digite o nome do funcionario %d: ", i + 1);
@@ -96,7 +101,7 @@ void maiormenor(funcionarios *funcionario, int *qnt)
             idmenor = i;
         }
     }
-    printf("Funcionario com o maior salario:\n");
+    printf("Funcionario com o maior salario:");
     printf("Nome: %s\n", funcionario[idmaior].nome);
     printf("ID: %d\n", funcionario[idmaior].id);
     printf("Salario: %.2f\n", funcionario[idmaior].salario);
@@ -115,32 +120,34 @@ int main(void)
     int qnt = 0, cont;
     int *p = &qnt;
     funcionarios *funcionario = malloc(sizeof(funcionarios));
-    while (1)
+    if (funcionario == NULL)
+    {
+        printf("Erro");
+        exit(1);
+    }
+    do
     {
         printf("O que deseja fazer?\n0-Exibir lista de funcionarios\n1-Cadastrar funcionarios\n2-Alterar salario\n3-Exibir maior e menor salario\n4-fechar o programa\n");
         scanf("%d", &cont);
         system("cls");
-        if (cont == 0)
+        switch (cont)
         {
+        case 0:
             imprime(funcionario, p);
-        }
-        else if (cont == 1)
-        {
+            break;
+        case 1:
             preenchefuncionarios(funcionario, p);
-        }
-        else if (cont == 2)
-        {
+            break;
+        case 2:
             alterasalario(funcionario, p);
-        }
-        else if (cont == 3)
-        {
+            break;
+        case 3:
             maiormenor(funcionario, p);
-        }
-        else if (cont == 4)
-        {
+            break;
+        default:
             break;
         }
-    }
+    } while (cont != 4);
     free(funcionario);
     return 0;
 }
