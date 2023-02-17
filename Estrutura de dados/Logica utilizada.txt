@@ -1,0 +1,10 @@
+Q01: o codigo começa alocando memoria para a struct e chama a função "preenchefuncionarios".
+Em seguida, ele entra em um loop que exibe um menu com as opções disponíveis (cadastrar funcionários, imprimir dados, alterar salário, mostrar maior e menor salário, e sair do programa).
+O usuario pode escolher uma opção digitando o número correspondente. 
+Se o usuário digitar uma opção inválida, o programa exibe uma mensagem de erro. 
+O loop continua até o usuário escolher a opção de sair do programa. 
+Quando o programa termina, ele libera a memória alocada para a struct "funcionarios".
+
+Q02: O código cadastra pessoas com nome, documento e idade em uma estrutura do tipo Pessoa.
+Ele permite a exibição dos dados cadastrados, a alteração da idade de uma pessoa escolhida e a identificação da pessoa com a maior e menor idade cadastrada. 
+O codigo utiliza alocação dinâmica de memória para armazenar os dados.
