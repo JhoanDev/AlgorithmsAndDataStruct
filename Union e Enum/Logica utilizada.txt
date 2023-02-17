@@ -1,0 +1,14 @@
+Q01: Este código define uma estrutura "Pessoa" que contém nome, idade e gênero.
+usando enumeração para definir as opções de gênero.
+O usuário insere informações para a variável "pessoa" e o programa exibe os dados inseridos.
+mostrando o gênero como "Masculino", "Feminino" ou "Neutro", dependendo da opção escolhida.
+
+Q02: Este código define uma struct que contém informações sobre um produto.
+como nome, preço e tipo (sendo este último definido através de uma union).
+O programa principal lê as informações do usuário e imprime o resultado na tela.
+
+Q03: Esse código recebe a data do usuário e a exibe no formato "dd/mm/aaaa".
+Ele usa uma enumeração para os meses e uma estrutura para representar a data. 
+O usuário insere o dia, o mês e o ano, e o código exibe a data formatada.
+O mês é representado por um número inteiro, e é subtraído 1 para corresponder ao índice na enumeração.
+Em seguida, o código usa um switch para imprimir o nome do mês correspondente e exibe a data formatada.
