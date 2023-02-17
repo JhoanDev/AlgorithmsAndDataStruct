@@ -1,0 +1,4 @@
+Q01: Este código solicita ao usuário a quantidade de linhas e colunas de uma matriz de caracteres (strings).
+aloca dinamicamente a memória para armazenar essa matriz, lê os caracteres digitados pelo usuário.
+verifica quais caracteres são uma "costa" (caracter '#' perto a um caracter '.' ou perto a nada) e conta quantas "costas" foram encontradas.
+Em seguida, libera a memória alocada dinamicamente e imprime o número de "costas" encontradas.
