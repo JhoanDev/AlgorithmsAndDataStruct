@@ -1,0 +1,11 @@
+Q01: O código aloca dinamicamente um vetor de 10 inteiros.
+preenche o vetor com valores crescentes e depois exibe o vetor. Por fim, libera a memória alocada.
+
+Q02: O código alocou dinamicamente uma matriz 3x3 e preencheu-a com valores, usando ponteiros duplos. 
+Depois, a matriz foi exibida na tela e, por fim, a memória alocada dinamicamente foi liberada.
+
+Q03: Esse programa cria um programa em C que solicita ao usuário que insira a quantidade de frutas a serem inseridas.
+Em seguida, o programa aloca dinamicamente memória para armazenar as informações inseridas pelo usuário (nome e preço das frutas) usando ponteiros.
+O programa entao usa um loop para preencher as informações de cada fruta inserida pelo usuário e armazená-las nas matrizes alocadas dinamicamente. 
+Finalmente, o programa exibe as informaçoes inseridas e libera toda a memória alocada.
+O programa usa funções como malloc, realloc e free para alocar e liberar memória.
