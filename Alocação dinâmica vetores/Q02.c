@@ -11,7 +11,7 @@ void preencherespostas(int questoes, char **alunos)
         for (int j = 0; j < questoes; j++)
         {
             printf("insira a resposta para questao %d: ", j + 1);
-            getchar();//limpando buffer
+            getchar();//limpando buffer.
             scanf(" %c", &alunos[i][j]);
         }
     }

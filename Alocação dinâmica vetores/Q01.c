@@ -68,7 +68,7 @@ int main(void)
     printf("\n-------------------------------------------------------------------");
     printf("\nPublico feminino total: %.0f \n %.2f %% gostaram do produto.", f, pf);
     printf("\n-------------------------------------------------------------------");
-    //liberando memoria alocada
+    //liberando memoria alocada.
     free(sexo);
     for (i = 0; i < entrevistados; i++)
     {

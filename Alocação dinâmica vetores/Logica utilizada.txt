@@ -1,2 +1,10 @@
-Q01,Q02,Q03: Apenas analise de codigo.
-Q04:  o programa utiliza ponteiros para modificar o valor de variáveis dentro de uma função e imprime o resultado na tela.
+Q01: Esse programa tem como objetivo receber informações de entrevistados sobre sua opinião em relação a um produto, separando-os por sexo e calculando a porcentagem de pessoas que gostaram do produto em cada grupo.
+O programa pede ao usuário que insira o número de entrevistados e aloca dinamicamente espaço na memória para armazenar o sexo e a opinião de cada entrevistado em vetores e matrizes.
+Em seguida, é feita uma contagem do número de homens e mulheres e quantos gostaram do produto em cada grupo, para que seja possível calcular a porcentagem de pessoas que gostaram do produto em cada categoria.
+Por fim, o programa exibe as informações na tela e libera a memória alocada dinamicamente.
+
+Q02: O programa solicita ao usuário o número de questões da prova e aloca dinamicamente espaço na memória para o gabarito (um array de caracteres) e para as respostas dos alunos (uma matriz de caracteres).
+O usuário preenche o gabarito e as respostas dos alunos para cada questão, utilizando loops e scanf para receber as entradas.
+O programa calcula a nota de cada aluno, comparando suas respostas com o gabarito e contando o número de questões corretas. O resultado é armazenado em um array de notas.
+O programa exibe as notas de cada aluno e a porcentagem de aprovação (nota maior ou igual a 6), utilizando loops e printf para formatar a saída.
+Por fim, o programa libera a memória alocada dinamicamente. 
