@@ -1,0 +1,3 @@
+Q01: O programa permite a criação de uma turma, a matrícula de alunos nessas turmas, a adição de notas para os alunos matriculados e a exibição de informações sobre as turmas e alunos cadastrados.
+O sistema permite a criação de até três turmas, cada uma com dez vagas disponíveis, e o lançamento de até três notas para cada aluno.
+O programa utiliza funções para implementar cada uma dessas funcionalidades e também uma função principal que realiza a chamada dessas funções de forma adequada.
