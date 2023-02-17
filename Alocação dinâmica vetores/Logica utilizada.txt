@@ -1,0 +1,2 @@
+Q01,Q02,Q03: Apenas analise de codigo.
+Q04:  o programa utiliza ponteiros para modificar o valor de variáveis dentro de uma função e imprime o resultado na tela.
