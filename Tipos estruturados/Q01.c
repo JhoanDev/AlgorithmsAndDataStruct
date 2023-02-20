@@ -39,30 +39,50 @@ void imprime_turmas(Turma **turmas, int n)
     for (int i = 0; i < n; i++)
     {
         Turma *turma = turmas[i];
-        printf("\nTurma %c - Vagas disponiveis: %d\n", turma->id, turma->vagas);
-        if (turma->vagas == MAX_VAGAS)
-        { // verificando se há alunos na turma
-            printf("Nao ha alunos matriculados.\n");
-        }
-        else
-        {
-            // exibindo todos os dados da turma
-            for (int j = 0; j < MAX_VAGAS - turma->vagas; j++)
-            {
-                Aluno *aluno = turma->alunos[j];
-                printf("Matricula: %d | Nome: %s | Notas: %.1f ; %.1f ; %.1f | Media: %.1f\n", aluno->mat, aluno->nome, aluno->notas[0], aluno->notas[1], aluno->notas[2], aluno->media);
-            }
-        }
-        printf("\n");
+        printf("Turma %c - Vagas disponiveis: %d\n", turma->id, turma->vagas);
+        /*         if (turma->vagas == MAX_VAGAS)
+                { // verificando se há alunos na turma
+                    printf("Nao ha alunos matriculados.\n");
+                }
+                else
+                {
+                    // exibindo todos os dados da turma
+                    for (int j = 0; j < MAX_VAGAS - turma->vagas; j++)
+                    {
+                        Aluno *aluno = turma->alunos[j];
+                        printf("Matricula: %d | Nome: %s | Notas: %.1f ; %.1f ; %.1f | Media: %.1f\n", aluno->mat, aluno->nome, aluno->notas[0], aluno->notas[1], aluno->notas[2], aluno->media);
+                    }
+                }
+                printf("\n"); */
     }
 }
 
-void matricula_aluno(Turma **turma, int mat, char *nome, int t)
+Turma *procura_turma(Turma **turma, int n, char id)
+{
+    int i = 0, verificadorindice = -1;
+    for (i = 0; i < n; i++)
+    {
+        if (turma[i]->id == id)
+        {
+            verificadorindice = i;
+        }
+    }
+    if (verificadorindice == -1)
+    {
+        return NULL;
+    }
+    else
+    {
+        return turma[verificadorindice];
+    }
+}
+
+void matricula_aluno(Turma *turma, int mat, char *nome)
 {
     // Verifica se ainda há vagas disponíveis na turma
-    if (turma[t]->vagas == 0)
+    if (turma->vagas == 0)
     {
-        printf("Nao ha vagas disponiveis na turma %c.\n", turma[t]->id);
+        printf("Nao ha vagas disponiveis na turma %c.\n", turma->id);
         return;
     }
     // Cria um novo aluno e preenche seus dados
@@ -77,11 +97,11 @@ void matricula_aluno(Turma **turma, int mat, char *nome, int t)
     int i;
     for (i = 0; i < MAX_VAGAS; i++)
     {
-        if (turma[t]->alunos[i] == NULL)
+        if (turma->alunos[i] == NULL)
         {
-            turma[t]->alunos[i] = novo_aluno;
-            turma[t]->vagas--;
-            printf("Aluno matriculado na turma %c.\n", turma[t]->id);
+            turma->alunos[i] = novo_aluno;
+            turma->vagas--;
+            printf("Aluno matriculado com sucesso!");
             return;
         }
     }
@@ -94,10 +114,10 @@ void lanca_notas(Turma *turma)
     {
         if (turma->alunos[j] != NULL)
         {
-            printf("Digite as notas do aluno %d - %s:\n", turma->alunos[j]->mat, turma->alunos[j]->nome);
+            printf("Matricula: %d\t - \tAluno: %s\n", turma->alunos[j]->mat, turma->alunos[j]->nome);
             for (int s = 0; s < 3; s++)
             {
-                printf("Nota %d: ", s + 1);
+                printf("Digite a nota %d: ", s + 1);
                 scanf("%f", &turma->alunos[j]->notas[s]);
             }
             // calcula a média do aluno
@@ -139,18 +159,20 @@ int main(void)
         printf("ERRO");
         exit(1);
     }
-    int controle = 0, n = 0, t = 0, matricula = 0;
+    Turma *minhaTurma;
+    int controle = 0, n = 0, matricula = 0;
     // exibindo visor inicial
-    printf("Bem-vindo ao Programa de Gerenciamento de Turmas!\nEste programa gerencia as turmas ofertadas, fornecendo as\nfuncionalidades de matricula, lancamento de notas e listagem de alunos.\n\nAutor: Jhoan Fernandes\tVersao:1.0\n");
+    printf("Bem-vindo ao Programa de Gerenciamento de Turmas!\nEste programa gerencia as turmas ofertadas, fornecendo as\nfuncionalidades de matricula, lancamento de notas e listagem de alunos.\n\nAutor: Jhoan Fernandes\tVersao:2.0");
     while (controle != 6) // vai repetir ate o usuario digitar 6
     {
-        printf("\nMenu:\n1-Criar turma\n2-Listar turmas\n3-Matricular aluno\n4-Lancar notas\n5-Listar alunos\n6-Sair\n");
+        printf("\n\nMenu:\n1-Criar turma\n2-Listar turmas\n3-Matricular aluno\n4-Lancar notas\n5-Listar alunos\n6-Sair\n\nDigite sua opcao: ");
         scanf("%d", &controle);
         system("cls");
         switch (controle)
         {
         case 1:
-            printf("\nInsira o id da turma que deseja criar: A,B ou C\n");
+            printf("Criando uma nova turma...");
+            printf("\nDigite um id: ");
             scanf(" %c", &id);
             if (n > 3)
             {
@@ -161,36 +183,66 @@ int main(void)
                 turma[n] = (Turma *)malloc(sizeof(Turma));
                 turma[n] = cria_turma(id);
                 n++; // quantidade de turmas ate agora
+                printf("Turma %c criada com sucesso!", id);
             }
             break;
         case 2:
             imprime_turmas(turma, n);
             break;
         case 3:
-            printf("insira o qual turma deseja cadastrar seu aluno: A-0 B-1 C-2\n");
-            scanf("%d", &t);
-            printf("insira a matricula do aluno: ");
-            scanf("%d", &matricula);
-            printf("insira o nome do aluno: ");
-            scanf(" %[^\n]s", &nome);
-            matricula_aluno(turma, matricula, nome, t);
+            printf("Matriculando aluno...");
+            printf("\nDigite o id da turma: ");
+            scanf(" %c", &id);
+            minhaTurma = procura_turma(turma, n, id);
+            if (minhaTurma != NULL)
+            {
+                printf("Digite a matricula: ");
+                scanf("%d", &matricula);
+                printf("Digite o nome: ");
+                scanf(" %[^\n]s", (char *)&nome);
+                matricula_aluno(minhaTurma, matricula, nome);
+            }
+            else
+            {
+                printf("Turma inexistente!");
+            }
             break;
         case 4:
-            printf("Qual turma deseja lancar as notas? A-0 B-1 C-2\n");
-            scanf("%d", &t);
-            lanca_notas(turma[t]);
+            printf("Lancando notas...");
+            printf("\nDigite o id da turma: ");
+            scanf(" %c", &id);
+            minhaTurma = procura_turma(turma, n, id);
+            if (minhaTurma != NULL)
+            {
+                lanca_notas(minhaTurma);
+            }
+            else
+            {
+                printf("Turma inexistente!");
+            }
             break;
         case 5:
-            printf("Listar alunos de qual turma? A-0 B-1 C-2\n");
-            scanf("%d", &t);
-            imprime_alunos(turma[t]);
+            printf("Listando alunos...");
+            printf("\nDigite o id da turma: ");
+            scanf(" %c", &id);
+            minhaTurma = procura_turma(turma, n, id);
+            if (minhaTurma != NULL)
+            {
+                imprime_alunos(minhaTurma);
+            }
+            else
+            {
+                printf("Turma inexistente!");
+            }
+            break;
+        case 6:
+            printf("Obrigado por usar meu programa!");
             break;
         default:
-            printf("opção invalida");
+            printf("opcao invalida!");
             break;
         }
     }
-    printf("Obrigado por usar meu programa!");
     for (int i = 0; i < n; i++)
     {
         free(turma[i]);
