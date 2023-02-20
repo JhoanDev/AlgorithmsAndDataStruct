@@ -178,7 +178,7 @@ int main(void)
             {
                 printf("numero maximo atingido");
             }
-            else if (procura_turma(turma,n,id) != NULL)
+            else if (procura_turma(turma, n, id) != NULL)
             {
                 printf("A turma Ja existe!");
             }
