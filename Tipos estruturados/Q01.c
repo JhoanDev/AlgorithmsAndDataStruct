@@ -174,9 +174,13 @@ int main(void)
             printf("Criando uma nova turma...");
             printf("\nDigite um id: ");
             scanf(" %c", &id);
-            if (n > 3)
+            if (n == MAX_TURMAS)
             {
                 printf("numero maximo atingido");
+            }
+            else if (procura_turma(turma,n,id) != NULL)
+            {
+                printf("A turma Ja existe!");
             }
             else
             {
