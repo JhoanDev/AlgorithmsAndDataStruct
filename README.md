@@ -34,4 +34,4 @@
   - Arquivo `.txt` contendo a lógica utilizada em cada atividade da pasta.
   - Arquivo `.pdf` com a lista de questões.
   - Arquivos `.c` com a resolução de cada atividade.
-- Além dos conteúdo das pastas também tem 7 códigos em `.c` extras.
+- Além dos conteúdo das pastas, também tem 7 códigos em `.c` extras.
