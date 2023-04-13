@@ -56,8 +56,8 @@ Lista *list_busca(Lista *l, int v)
         {
             return p;
         }
-        return NULL;
     }
+    return NULL;
 }
 
 // função para retirar um elemento
