@@ -31,5 +31,6 @@ int main(void)
     scanf("%d", &valor);
     no = maiores(listaint, valor);
     printf("\nExistem %d (nos) com dados maiores que %d na lista", no, valor);
+    list_libera(listaint);
     return 0;
 }

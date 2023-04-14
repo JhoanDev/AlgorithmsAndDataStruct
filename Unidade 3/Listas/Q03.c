@@ -41,5 +41,8 @@ int main(void)
     Lista *final = contatena(listaint1, listaint2);
     printf("\nLista concatenada:\n");
     list_imprime(final);
+    list_libera(listaint1);
+    list_libera(listaint2);
+    list_libera(final);
     return 0;
 }

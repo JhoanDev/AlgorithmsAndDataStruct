@@ -61,7 +61,7 @@ Lista *list_busca(Lista *l, int v)
 }
 
 // função para retirar um elemento
-Lista *lita_retira(Lista *l, int v)
+Lista *list_retira(Lista *l, int v)
 {
     Lista *ant = NULL;
     Lista *p = l;

@@ -18,7 +18,7 @@ int list_vazia(Lista *l);
 Lista *list_busca(Lista *l, int v);
 
 // função para retirar um elemento
-Lista *lita_retira(Lista *l, int v);
+Lista *list_retira(Lista *l, int v);
 
 // função para liberar elementos
 void list_libera(Lista *l);

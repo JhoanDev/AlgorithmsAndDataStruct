@@ -10,7 +10,7 @@ Lista *ultimo(Lista *l)
     }
     while (l->prox != NULL)
     {
-        l = l->prox; //avança para o proximo nó
+        l = l->prox; // avança para o proximo nó
     }
     return l;
 }
@@ -26,6 +26,8 @@ int main(void)
     }
     list_imprime(listaint);
     Lista *final = ultimo(listaint);
-    printf("\nO valor do ultimo (no) da lista: %d",final->dado);
+    printf("\nO valor do ultimo (no) da lista: %d", final->dado);
+    list_libera(listaint);
+    list_libera(final);
     return 0;
 }

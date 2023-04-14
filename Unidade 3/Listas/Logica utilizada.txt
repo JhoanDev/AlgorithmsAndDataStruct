@@ -1,0 +1,17 @@
+Q01: O programa cria uma lista encadeada com 10 valores inteiros aleatórios entre 0 e 50.
+Em seguida, pede ao usuário um valor inteiro para comparar com os dados da lista e contar quantos são maiores que ele.
+A função "maiores" percorre a lista verificando se cada elemento é maior que o valor informado, incrementando uma variável contador sempre que encontrar um elemento que satisfaça essa condição.
+No final, o programa exibe o número de elementos da lista que são maiores que o valor informado pelo usuário.
+Ao final, a lista é liberada da memória.
+
+Q02: O código tem uma função chamada "ultimo" que recebe uma lista como parâmetro e retorna o último nó da lista. 
+A função percorre a lista até encontrar o último nó, que é quando o nó atual aponta para NULL.
+Se a lista estiver vazia, a função exibe uma mensagem de erro e encerra o programa.
+
+Q03: O código acima define uma função "contatena" que recebe duas listas "l1" e "l2" como entrada e retorna uma nova lista que é a concatenação de ambas as listas.
+A função primeiro verifica se a lista "l1" é vazia, caso seja, ela retorna a lista "l2".
+Caso contrário, a função percorre a lista "l1" até encontrar o último nó e atribui a lista "l2" como sendo o próximo nó desse último nó.
+Em seguida, a função retorna a lista "l1" concatenada com a "l2".
+
+Q04: Este código implementa uma função que recebe uma lista encadeada e um valor n, e remove todas as ocorrências desse valor da lista.
+Isso é feito percorrendo a lista com dois ponteiros, um para o nó atual e outro para o nó anterior, e atualizando os ponteiros quando um nó com o valor desejado é encontrado.
