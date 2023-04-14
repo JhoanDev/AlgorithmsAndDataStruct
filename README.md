@@ -14,24 +14,37 @@
 
 ### Lista de pastas
 
-- `Alocação Dinâmica:` Atividades relacionadas à alocação dinâmica de memória em C.
+- `Unidade 1`
 
-- `Alocação dinâmica de vetores:` Atividades específicas sobre alocação dinâmica de vetores em C.
+  - `Alocação Dinâmica:` Atividades relacionadas à alocação dinâmica de memória em C.
 
-- `Estrutura de dados:` Atividades gerais sobre Estrutura de Dados em C.
+  - `Alocação dinâmica de vetores:` Atividades específicas sobre alocação dinâmica de vetores em C.
 
-- `Matriz dinâmica:` Atividade específica sobre alocação dinâmica de matrizes em C.
+  - `Estrutura de dados:` Atividades gerais sobre Estrutura de Dados em C.
 
-- `Ponteiros:` Atividades relacionadas a ponteiros em C.
+  - `Matriz dinâmica:` Atividade específica sobre alocação dinâmica de matrizes em C.
 
-- `Tipos estruturados:` Atividade sobre tipos estruturados em C.
+  - `Ponteiros:` Atividades relacionadas a ponteiros em C.
 
-- `Union e Enum:` Atividades específicas sobre o uso de Union e Enum em C.
+  - `Tipos estruturados:` Atividade sobre tipos estruturados em C.
+
+  - `Union e Enum:` Atividades específicas sobre o uso de Union e Enum em C.
+
+- `Unidade 3`
+  - `Listas` Atividade sobre Listas em C.
 
 ### Conteúdo
 
-- Cada pasta contém:
-  - Arquivo `.txt` contendo a lógica utilizada em cada atividade da pasta.
-  - Arquivo `.pdf` com a lista de questões.
-  - Arquivos `.c` com a resolução de cada atividade.
-- Além dos conteúdo das pastas, também tem 7 códigos em `.c` extras.
+- Unidade 1
+  - Cada pasta contém:
+    - Arquivo `.txt` contendo a lógica utilizada em cada atividade da pasta.
+    - Arquivo `.pdf` com a lista de questões.
+    - Arquivos `.c` com a resolução de cada atividade.
+    - Além dos conteúdo das pastas, também tem códigos em `.c` extras.
+
+- Unidade 3
+  - Cada pasta contém:
+    - Arquivo `.txt` contendo a lógica utilizada em cada atividade da pasta.
+    - Arquivo `.pdf` com a lista de questões.
+    - Arquivos `.c` com a resolução de cada atividade.
+    - Arquivos `.h` com as Tads necessárias
