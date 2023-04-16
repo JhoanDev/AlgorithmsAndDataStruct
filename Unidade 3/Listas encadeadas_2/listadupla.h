@@ -8,7 +8,7 @@ Listad *listd_cria(void);
 void listd_libera(Listad *l);
 
 //adiciona um novo valor na lista
-Listad *listd_insere(Listad *l, int v);
+Listad *listd_adc(Listad *l, int v);
 
 //busca um item na lista
 Listad *listd_busca(Listad* l, int v);

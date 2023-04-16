@@ -28,7 +28,7 @@ void listd_libera(Listad *l)
 }
 
 //adiciona um novo valor na lista
-Listad *listd_insere(Listad *l, int v)
+Listad *listd_adc(Listad *l, int v)
 {
     Listad *novo = (Listad *)malloc(sizeof(Listad));
     novo->dado = v;

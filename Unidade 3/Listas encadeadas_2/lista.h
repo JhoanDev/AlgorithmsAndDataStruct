@@ -23,13 +23,13 @@ Lista *list_retira(Lista *l, int v);
 void list_libera(Lista *l);
 
 // imprimir a informação
-void listcircular_imprime(Lista *l);
+void listc_imprime(Lista *l);
 
 // inserindo no inicio
-Lista *listcircular_adc(Lista *l, int i);
+Lista *listc_adc(Lista *l, int i);
 
 // função para buscar um elemento da lista circular
-Lista *listcircular_busca(Lista *l, int v);
+Lista *listc_busca(Lista *l, int v);
 
 // função para retirar um elemento
-Lista *listcircular_retira(Lista *l, int v);
+Lista *listc_retira(Lista *l, int v);

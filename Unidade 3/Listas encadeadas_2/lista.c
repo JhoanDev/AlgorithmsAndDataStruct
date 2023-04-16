@@ -100,7 +100,7 @@ void list_libera(Lista *l)
 }
 
 // imprimir a informação
-void listcircular_imprime(Lista *l)
+void listc_imprime(Lista *l)
 {
     Lista *p = l;
     do
@@ -111,7 +111,7 @@ void listcircular_imprime(Lista *l)
 }
 
 // inserindo no inicio
-Lista *listcircular_adc(Lista *l, int i)
+Lista *listc_adc(Lista *l, int i)
 {
     Lista *novo = (Lista *)malloc(sizeof(Lista));
     novo->dado = i;
@@ -125,8 +125,8 @@ Lista *listcircular_adc(Lista *l, int i)
     return l;             // retorna a primeira célula da lista
 }
 
-// função para buscar um elemento da lista circular
-Lista *listcircular_busca(Lista *l, int v)
+// função para buscar um elemento da lista c
+Lista *listc_busca(Lista *l, int v)
 {
     Lista *p = l;
     while (p != NULL && p->prox != l && p->dado != v)
@@ -139,7 +139,7 @@ Lista *listcircular_busca(Lista *l, int v)
 }
 
 // função para retirar um elemento
-Lista *listcircular_retira(Lista *l, int v)
+Lista *listc_retira(Lista *l, int v)
 {
     Lista *ant = NULL;
     Lista *p = l;
