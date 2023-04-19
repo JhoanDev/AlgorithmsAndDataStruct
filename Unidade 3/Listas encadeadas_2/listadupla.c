@@ -9,13 +9,13 @@ struct listad
     struct listad *ant;
 };
 
-//inicia a lista
+// inicia a lista
 Listad *listd_cria(void)
 {
     return NULL;
 }
 
-//libera os nos da lista
+// libera os nos da lista
 void listd_libera(Listad *l)
 {
     Listad *p = l;
@@ -27,7 +27,7 @@ void listd_libera(Listad *l)
     }
 }
 
-//adiciona um novo valor na lista
+// adiciona um novo valor na lista
 Listad *listd_adc(Listad *l, int v)
 {
     Listad *novo = (Listad *)malloc(sizeof(Listad));
@@ -39,7 +39,7 @@ Listad *listd_adc(Listad *l, int v)
     return l;
 }
 
-//busca um item na lista
+// busca um item na lista
 Listad *listd_busca(Listad *l, int v)
 {
     Listad *p;
@@ -53,7 +53,7 @@ Listad *listd_busca(Listad *l, int v)
     return NULL; // nao achou
 }
 
-//retira um no da lista
+// retira um no da lista
 Listad *listd_retira(Listad *l, int v)
 {
     Listad *p = listd_busca(l, v);
@@ -79,7 +79,7 @@ Listad *listd_retira(Listad *l, int v)
     return l;
 }
 
-//verifica se a lista esta vazia
+// verifica se a lista esta vazia
 int listd_vazia(Listad *l)
 {
     if (l == NULL)
@@ -88,7 +88,7 @@ int listd_vazia(Listad *l)
         return 0;
 }
 
-//imprime o valor de todos os valores da lista
+// imprime o valor de todos os valores da lista
 void listd_imprime(Listad *l)
 {
     Listad *p;
@@ -96,4 +96,91 @@ void listd_imprime(Listad *l)
     {
         printf("Dado = %d\n", p->dado);
     }
+}
+
+// adiciona em uma lista dupla circular
+Listad *listdc_adc(Listad *l, int v)
+{
+    Listad *novo = (Listad *)malloc(sizeof(Listad));
+    novo->dado = v;
+    novo->prox = novo;
+    novo->ant = novo;
+    if (!l)
+    {
+        return novo;
+    }
+    else
+    {
+        Listad *ultimo = l->ant;
+        novo->prox = l;
+        l->ant = novo;
+        ultimo->prox = novo;
+        novo->ant = ultimo;
+        return l;
+    }
+}
+
+// busca um elemento
+Listad *listdc_busca(Listad *l, int v)
+{
+    Listad *p;
+    for (p = l; p != NULL; p = p->prox)
+    {
+        if (p->dado == v)
+        {
+            return p;
+        }
+    }
+    return NULL; // não achou
+}
+
+// retira um elemento
+Listad *listdc_retira(Listad *l, int v)
+{
+    Listad *p = listd_busca(l, v);
+
+    if (p == NULL)
+    {
+        return l; // não achou
+    }
+    // retira o elemento
+    if (l == p)
+    { // testa se é o primeiro elemento
+        l = p->prox;
+    }
+    if (p->ant != NULL)
+    {
+        p->ant->prox = p->prox; // retira o do meio ou do final
+    }
+    if (p->prox != NULL)
+    { // testa se é o último elemento
+        p->prox->ant = p->ant;
+    }
+    free(p);
+    return l;
+}
+
+// verifica se a lista esta vazia
+int listdc_vazia(Listad *l)
+{
+    if (l == NULL)
+        return 1;
+    else
+        return 0;
+}
+
+// imprime a lista
+void listdc_imprime(Listad *l)
+{
+    if (l == NULL)
+    {
+        printf("Lista vazia.\n");
+        return;
+    }
+    Listad *p = l;
+    do
+    {
+        printf("Dado = %d\n", p->dado);
+        p = p->prox;
+    } while (p != l);
 }
