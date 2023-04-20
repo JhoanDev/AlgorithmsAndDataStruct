@@ -102,6 +102,11 @@ void listd_imprime(Listad *l)
 Listad *listdc_adc(Listad *l, int v)
 {
     Listad *novo = (Listad *)malloc(sizeof(Listad));
+    if (novo == NULL)
+    {
+        printf("[ERRO] memoria insuficiente!");
+        exit(1);
+    }
     novo->dado = v;
     novo->prox = novo;
     novo->ant = novo;

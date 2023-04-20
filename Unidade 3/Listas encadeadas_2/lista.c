@@ -114,6 +114,11 @@ void listc_imprime(Lista *l)
 Lista *listc_adc(Lista *l, int i)
 {
     Lista *novo = (Lista *)malloc(sizeof(Lista));
+    if (novo == NULL)
+    {
+        printf("[ERRO] memoria insuficiente!");
+        exit(1);
+    }
     novo->dado = i;
     if (l == NULL) // se a lista estiver vazia
     {
