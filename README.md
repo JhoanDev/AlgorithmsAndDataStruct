@@ -14,6 +14,9 @@
 
 ### Lista de pastas
 
+- `TADS`
+  - maioria das TADS criadas durante as unidades.
+
 - `Unidade 1`
 
   - `Alocação Dinâmica:` Atividades relacionadas à alocação dinâmica de memória em C.
