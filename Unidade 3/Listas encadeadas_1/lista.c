@@ -18,6 +18,11 @@ Lista *list_cria(void)
 Lista *list_adc(Lista *l, int i)
 {
     Lista *novo = (Lista *)malloc(sizeof(Lista));
+    if (novo == NULL)
+    {
+        printf("[ERRO] memoria insuficiente!");
+        exit(1);
+    }
     novo->dado = i;
     novo->prox = l;
     return novo;

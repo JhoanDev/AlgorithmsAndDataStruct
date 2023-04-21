@@ -4,7 +4,7 @@
 
 struct listad
 {
-    int dado;
+    float info;
     struct listad *prox;
     struct listad *ant;
 };
@@ -36,7 +36,7 @@ Listad *listd_adc(Listad *l, int v)
         printf("[ERRO] memoria insuficiente!");
         exit(1);
     }
-    novo->dado = v;
+    novo->info = v;
     novo->prox = l;
     novo->ant = NULL;
     if (l)
@@ -50,7 +50,7 @@ Listad *listd_busca(Listad *l, int v)
     Listad *p;
     for (p = l; p != NULL; p = p->prox)
     {
-        if (p->dado == v)
+        if (p->info == v)
         {
             return p;
         }
@@ -99,7 +99,7 @@ void listd_imprime(Listad *l)
     Listad *p;
     for (p = l; p != NULL; p = p->prox)
     {
-        printf("Dado = %d\n", p->dado);
+        printf("info = %.2f\n", p->info);
     }
 }
 
@@ -112,7 +112,7 @@ Listad *listdc_adc(Listad *l, int v)
         printf("[ERRO] memoria insuficiente!");
         exit(1);
     }
-    novo->dado = v;
+    novo->info = v;
     novo->prox = novo;
     novo->ant = novo;
     if (!l)
@@ -136,7 +136,7 @@ Listad *listdc_busca(Listad *l, int v)
     Listad *p;
     for (p = l; p != NULL; p = p->prox)
     {
-        if (p->dado == v)
+        if (p->info == v)
         {
             return p;
         }
@@ -190,7 +190,7 @@ void listdc_imprime(Listad *l)
     Listad *p = l;
     do
     {
-        printf("Dado = %d\n", p->dado);
+        printf("info = %.2f\n", p->info);
         p = p->prox;
     } while (p != l);
 }
