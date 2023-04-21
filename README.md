@@ -31,7 +31,12 @@
   - `Union e Enum:` Atividades específicas sobre o uso de Union e Enum em C.
 
 - `Unidade 3`
-  - `Listas` Atividade sobre Listas em C.
+
+  - `Listas encadeadas_1:` Atividades sobre Listas encadeadas em C.
+
+  - `Listas encadeadas_2:` Atividades sobre listas duplamente encadeadas, listas encadeadas circulares e listas duplamente encadeadas circulares. em C.
+
+  - `Pilha:` Atividades sobre a estrutura pilha em C.
 
 ### Conteúdo
 
@@ -40,11 +45,10 @@
     - Arquivo `.txt` contendo a lógica utilizada em cada atividade da pasta.
     - Arquivo `.pdf` com a lista de questões.
     - Arquivos `.c` com a resolução de cada atividade.
-    - Além dos conteúdo das pastas, também tem códigos em `.c` extras.
+  - Além dos conteúdo das pastas, também tem códigos em `.c` extras.
 
 - Unidade 3
   - Cada pasta contém:
-    - Arquivo `.txt` contendo a lógica utilizada em cada atividade da pasta.
     - Arquivo `.pdf` com a lista de questões.
     - Arquivos `.c` com a resolução de cada atividade.
     - Arquivos `.h` com as Tads necessárias
