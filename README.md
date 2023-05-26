@@ -36,7 +36,9 @@ Cada pasta contém os códigos desenvolvidos durante as atividades relacionadas 
 
 `Unidade 2`
 
+- `Manipulação de arquivos:` Atividades sobre manipular arquivos em C.
 
+- `Tipos abstratos de dados:` Atividades sobre TADS em C.
 
 `Unidade 3`
 
@@ -45,6 +47,8 @@ Cada pasta contém os códigos desenvolvidos durante as atividades relacionadas 
 - `Listas encadeadas_2:` Atividades sobre listas duplamente encadeadas, listas encadeadas circulares e listas duplamente encadeadas circulares. em C.
 
 - `Pilha:` Atividades sobre a estrutura pilha em C.
+
+- `Fila:` Atividades sobre a estrutura pilha em C
 
 ### Conteúdo
 
@@ -57,9 +61,9 @@ Cada pasta contém os códigos desenvolvidos durante as atividades relacionadas 
 `Unidade 2`
 - Arquivo `.pdf` com a lista de questões.
 - Arquivos `.c` com a resolução de cada atividade.
-- Arquivos `.h` com as Tads necessárias
+- Arquivos `.h` com os cabeçalhos necessários
 
 `Unidade 3`
 - Arquivo `.pdf` com a lista de questões.
 - Arquivos `.c` com a resolução de cada atividade.
-- Arquivos `.h` com as Tads necessárias
+- Arquivos `.h` com os cabeçalhos necessários
