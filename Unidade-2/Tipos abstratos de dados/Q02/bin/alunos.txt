@@ -1,0 +1,15 @@
+Nome: Ana
+Nota: 9.1
+
+Nome: Carlos
+Nota: 7.8
+
+Nome: João
+Nota: 7.5
+
+Nome: Maria
+Nota: 8.2
+
+Nome: Pedro
+Nota: 6.9
+
