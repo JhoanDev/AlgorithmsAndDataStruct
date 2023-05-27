@@ -54,16 +54,16 @@ Cada pasta contém os códigos desenvolvidos durante as atividades relacionadas 
 
 `Unidade 1`
 - Arquivo `.txt` contendo a lógica utilizada em cada atividade da pasta.
-- Arquivo `.pdf` com a lista de questões.
+- Arquivos `.pdf` com listas de questões.
 - Arquivos `.c` com a resolução de cada atividade.
 - também tem códigos em `.c` extras.
 
 `Unidade 2`
-- Arquivo `.pdf` com a lista de questões.
+- Arquivos `.pdf` com listas de questões.
 - Arquivos `.c` com a resolução de cada atividade.
-- Arquivos `.h` com os cabeçalhos necessários
+- Arquivos `.h` com os cabeçalhos necessários.
 
 `Unidade 3`
-- Arquivo `.pdf` com a lista de questões.
+- Arquivos `.pdf` com listas de questões.
 - Arquivos `.c` com a resolução de cada atividade.
-- Arquivos `.h` com os cabeçalhos necessários
+- Arquivos `.h` com os cabeçalhos necessários.
