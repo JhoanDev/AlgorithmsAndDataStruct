@@ -10,31 +10,31 @@ typedef struct funcionarios
     char cargo[25];
 } funcionarios;
 
-void preenchefuncionarios(funcionarios *funcionario, int *qnt)
+void preenchefuncionarios(funcionarios **funcionario, int *qnt)
 {
     int n;
     printf("quantos funcionarios deseja cadastrar:");
     scanf("%d", &n);
-    funcionario = realloc(funcionario, (*qnt + n) * sizeof(funcionarios)); //reallocando memoria dinamicamente
-    if (funcionario == NULL)
+    *funcionario = realloc(*funcionario, (*qnt + n) * sizeof(funcionarios)); 
+    if (*funcionario == NULL)
     {
         printf("Erro");
         exit(1);
     }
-    for (int i = (*qnt); i < n + (*qnt); i++) // preenchendo funcionarios
+    for (int i = (*qnt); i < n + (*qnt); i++) 
     {
         printf("Digite o nome do funcionario %d: ", i + 1);
-        scanf(" %[^\n]", funcionario[i].nome);
+        scanf(" %[^\n]", (*funcionario)[i].nome); 
         printf("Digite o salario do funcionario %d: ", i + 1);
-        scanf("%f", &funcionario[i].salario);
+        scanf("%f", &(*funcionario)[i].salario); 
         printf("Digite o ID do funcionario %d: ", i + 1);
-        scanf("%d", &funcionario[i].id);
+        scanf("%d", &(*funcionario)[i].id);
         printf("Digite o cargo do funcionario %d: ", i + 1);
-        scanf(" %[^\n]", funcionario[i].cargo);
-        system("cls");
+        scanf(" %[^\n]", (*funcionario)[i].cargo);
     }
     (*qnt) += n;
 }
+
 
 void imprime(funcionarios *funcionario, int *qnt)
 {
@@ -82,7 +82,6 @@ void alterasalario(funcionarios *funcionario, int *qnt)
         scanf("%f", &funcionario[cont - 1].salario);
         printf("Alterado com sucesso! \nDeseja alterar de mais algum funcionario? (1-sim) (2-nao)");
         scanf("%i", &verificador);
-        system("cls");
     } while (verificador == 1);
 }
 
@@ -127,19 +126,17 @@ int main(void)
         printf("Erro");
         exit(1);
     }
-    //criando uma tela inicial para o programa
     do
     {
         printf("O que deseja fazer?\n0-Exibir lista de funcionarios\n1-Cadastrar funcionarios\n2-Alterar salario\n3-Exibir maior e menor salario\n4-fechar o programa\n");
         scanf("%d", &cont);
-        system("cls");
         switch (cont)
         {
         case 0:
             imprime(funcionario, p);
             break;
         case 1:
-            preenchefuncionarios(funcionario, p);
+            preenchefuncionarios(&funcionario, p);
             break;
         case 2:
             alterasalario(funcionario, p);
