@@ -3,7 +3,7 @@
 int main()
 {
     // Criando cinco alunos e armazenando-os em um vetor de ponteiros
-    Aluno **alunos[5];
+    Aluno *alunos[5];
     alunos[0] = aluno_cria("João", 7.5);
     alunos[1] = aluno_cria("Maria", 8.2);
     alunos[2] = aluno_cria("Pedro", 6.9);
