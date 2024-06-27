@@ -1,69 +1,45 @@
-# AlgorithmsAndDataStruct
+# Algorithms and Data Structures
 
 ## Tópicos
 
 - [Descrição](#descrição)
-- [Lista de pastas](#lista-de-pastas)
-- [Conteúdo](#conteúdo)
+- [Lista de Pastas](#lista-de-pastas)
+- [Como Usar](#como-usar)
+- [Licença](#licença)
 
 ### Descrição
 
-Este repositório contém uma série de códigos desenvolvidos em C para atividades relacionadas a Estrutura de Dados.
+Este repositório contém uma série de códigos desenvolvidos em C para atividades relacionadas a Estrutura de Dados. O objetivo é armazenar minhas atividades durante a disciplina, facilitando o acesso e a revisão dos conceitos abordados.
 
-O objetivo desse repositório é armazenar minhas atividades durante a disciplina.
+### Lista de Pastas
 
-Cada pasta contém os códigos desenvolvidos durante as atividades relacionadas ao tópico específico. Sinta-se à vontade para baixar e modificar os códigos conforme suas necessidades.
-### Lista de pastas
+- **TADS:** Contém a maioria das TADS criadas durante as unidades.
 
-`TADS`
-- maioria das `TADS` criadas durante as unidades.
+- **Unidade 1:** Atividades relacionadas à alocação dinâmica, ponteiros, tipos estruturados, entre outros conceitos.
 
-`Unidade 1`
+- **Unidade 2:** Atividades sobre manipulação de arquivos, tipos abstratos de dados e estruturas avançadas.
 
-- `Alocação Dinâmica:` Atividades relacionadas à alocação dinâmica de memória em C.
+- **Unidade 3:** Atividades sobre listas encadeadas, pilhas, filas e estruturas de dados mais complexas.
 
-- `Alocação dinâmica de vetores:` Atividades específicas sobre alocação dinâmica de vetores em C.
+### Como Usar
 
-- `Estrutura de dados:` Atividades gerais sobre Estrutura de Dados em C.
+1. Clone o repositório:
+    ```sh
+    git clone https://github.com/seu-usuario/AlgorithmsAndDataStruct.git
+    ```
+2. Navegue até a pasta desejada:
+    ```sh
+    cd AlgorithmsAndDataStruct/Unidade1/AlocacaoDinamica
+    ```
+3. Compile o código usando um compilador C, por exemplo:
+    ```sh
+    gcc -o main exemplo.c
+    ```
+4. Execute o programa:
+    ```sh
+    ./main
+    ```
 
-- `Matriz dinâmica:` Atividade específica sobre alocação dinâmica de matrizes em C.
+### Licença
 
-- `Ponteiros:` Atividades relacionadas a ponteiros em C.
-
-- `Tipos estruturados:` Atividade sobre tipos estruturados em C.
-
-- `Union e Enum:` Atividades específicas sobre o uso de Union e Enum em C.
-
-`Unidade 2`
-
-- `Manipulação de arquivos:` Atividades sobre manipular arquivos em C.
-
-- `Tipos abstratos de dados:` Atividades sobre TADS em C.
-
-`Unidade 3`
-
-- `Listas encadeadas_1:` Atividades sobre Listas encadeadas em C.
-
-- `Listas encadeadas_2:` Atividades sobre listas duplamente encadeadas, listas encadeadas circulares e listas duplamente encadeadas circulares. em C.
-
-- `Pilha:` Atividades sobre a estrutura pilha em C.
-
-- `Fila:` Atividades sobre a estrutura pilha em C
-
-### Conteúdo
-
-`Unidade 1`
-- Arquivo `.txt` contendo a lógica utilizada em cada atividade da pasta.
-- Arquivos `.pdf` com listas de questões.
-- Arquivos `.c` com a resolução de cada atividade.
-- também tem códigos em `.c` extras.
-
-`Unidade 2`
-- Arquivos `.pdf` com listas de questões.
-- Arquivos `.c` com a resolução de cada atividade.
-- Arquivos `.h` com os cabeçalhos necessários.
-
-`Unidade 3`
-- Arquivos `.pdf` com listas de questões.
-- Arquivos `.c` com a resolução de cada atividade.
-- Arquivos `.h` com os cabeçalhos necessários.
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para obter mais informações.
